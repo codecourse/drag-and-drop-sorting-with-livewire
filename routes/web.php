@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Links;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    //
-});
+auth()->loginUsingId(1);
+
+Route::get('/', Links::class);
