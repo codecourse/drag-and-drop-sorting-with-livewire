@@ -2,7 +2,7 @@
     <div
         x-data
         x-sortable
-        x-on:sorted="console.log($event.detail)"
+        x-on:sorted="$wire.updateOrder($event.detail)"
         class="space-y-3"
     >
         @foreach ($links as $link)
