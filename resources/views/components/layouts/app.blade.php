@@ -11,5 +11,7 @@
         <div class="max-w-xl mx-auto py-12">
             {{ $slot }}
         </div>
+
+        @livewireScriptConfig
     </body>
 </html>
