@@ -11,4 +11,9 @@ class Link extends Model implements Sortable
 {
     use SortableTrait;
     use HasFactory;
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

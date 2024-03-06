@@ -9,7 +9,9 @@ class Links extends Component
 {
     public function updateOrder(array $order)
     {
-        Link::setNewOrder($order);
+        Link::setNewOrder($order, 1, 'id', function ($query) {
+            $query->whereBelongsTo(auth()->user());
+        });
     }
 
     public function render()
